@@ -10,6 +10,7 @@ The workspace supports specialized commands that route directly to procedural sk
 
 | Command | Skill | Description |
 | :--- | :--- | :--- |
+| `git-commit-msg`<br>`/git-commit-msg` | [`git-commit-msg`](.agents/skills/git-commit-msg/SKILL.md) | Generates a structured, professional Git commit message based on workspace git status and diff. |
 | `impl-design <feature/screen name>`<br>`/impl-design <feature/screen name>` | [`implement-design`](.agents/skills/implement-design/SKILL.md) | Implements an Android UI screen or feature from Figma using Jetpack Compose, Clean Architecture, DDD, and MVI. |
 
 For detailed command specifications and guidelines for adding future commands, see [`.agents/rules/commands.md`](.agents/rules/commands.md).

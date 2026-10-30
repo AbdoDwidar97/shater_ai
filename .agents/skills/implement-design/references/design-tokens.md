@@ -1,6 +1,6 @@
 # SHATER AI — Figma Design Tokens
 
-Extracted from Figma File: [SHATER AI](https://www.figma.com/design/3zX7JFMMuzyVcLBkdHgjAh/SHATER-AI?node-id=3-13) (Node `3:13`)
+Extracted from Figma File: [SHATER AI](https://www.figma.com/design/3zX7JFMMuzyVcLBkdHgjAh/SHATER-AI?node-id=0-1&t=c3p3dLk1dJPEb6Sp-1)
 
 ---
 

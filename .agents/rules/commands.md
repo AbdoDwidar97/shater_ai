@@ -8,11 +8,43 @@ This document defines the custom commands supported in this workspace and how th
 
 | Command | Mapped Skill | Description / Arguments |
 | :--- | :--- | :--- |
+| `git-commit-msg`<br>`/git-commit-msg` | [`git-commit-msg`](../skills/git-commit-msg/SKILL.md) | Generates a structured Git commit message based on workspace git status and diff. |
 | `impl-design <feature/screen name>`<br>`/impl-design <feature/screen name>` | [`implement-design`](../skills/implement-design/SKILL.md) | Implements an Android UI screen or feature from Figma using Jetpack Compose, Clean Architecture, DDD, and MVI. |
 
 ---
 
-## 1. Command: `impl-design`
+## 1. Command: `git-commit-msg`
+
+### Syntax
+```text
+git-commit-msg
+/git-commit-msg
+git-commit-msg [additional context / notes]
+```
+
+### Examples
+- `git-commit-msg`
+- `/git-commit-msg`
+- `git-commit-msg added meeting details screen and use case`
+
+### Execution Directives
+When this command is invoked:
+1. **Activate Skill**:
+   - Immediately load and read [`.agents/skills/git-commit-msg/SKILL.md`](../skills/git-commit-msg/SKILL.md).
+2. **Inspect Git Changes**:
+   - Run `git diff --cached` to review staged changes.
+   - Run `git diff` to review unstaged changes.
+   - Run `git status --short` to see modified and untracked files.
+   - Incorporate any user-provided notes or summary context.
+3. **Format strictly according to Rules**:
+   - Section 1: **Change Overview Title** (Title Case, no type prefix like `feat:`, concise one line).
+   - Section 2: **Change Description and Details** (concise single paragraph in natural professional English explaining what and why).
+   - Section 3: **Commit Datetime** (`Commit datetime: DD Mon YYYY - hh:mmAM/PM` with current date and time).
+   - Strict Constraints: No Markdown headings, no emojis, no wrapping quotes, and no surrounding commentary before or after.
+
+---
+
+## 2. Command: `impl-design`
 
 ### Syntax
 ```text
@@ -44,7 +76,7 @@ When this command is invoked:
 
 ---
 
-## 2. Framework for Future Skills & Commands
+## 3. Framework for Future Skills & Commands
 
 When building and registering new skills in the future, adhere to the following protocol:
 
